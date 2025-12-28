@@ -74,29 +74,29 @@ const MainPage: React.FC = () => {
 
   const getPrompt = () => {
     return `
-너는 사람들이 실제로 써먹을 수 있는 "현실적인 변명하는 메시지"를 작성하는 도우미다.
-
-아래 조건을 만족하는 한국어 문장 1개를 생성하라.
-
-[상황]
-- ${situation}
-
-[상대방]
-- ${target}
-
-[톤]
-- ${tone}
-
-[추가 상황 설명]
-- ${additionalInfo ?? '없음'}
-
-출력 조건:
-- 한국어로만 작성
-- 길이는 2~3문장
-- 바로 복사해서 메시지로 보낼 수 있게 작성
-
-문장만 출력하고, 설명이나 부연은 하지 말 것.
-`;
+      너는 사람들이 실제로 써먹을 수 있는 "현실적인 변명하는 메시지"를 작성하는 도우미다.
+      
+      아래 조건을 만족하는 한국어 문장 1개를 생성하라.
+      
+      [상황]
+      - ${situation}
+      
+      [상대방]
+      - ${target}
+      
+      [톤]
+      - ${tone}
+      
+      [추가 상황 설명]
+      - ${additionalInfo ?? '없음'}
+      
+      출력 조건:
+      - 한국어로만 작성
+      - 길이는 2~3문장
+      - 바로 복사해서 메시지로 보낼 수 있게 작성
+      
+      문장만 출력하고, 설명이나 부연은 하지 말 것.
+    `;
   }
 
 
@@ -339,6 +339,12 @@ const MainPage: React.FC = () => {
               </div>
             </div>
           )}
+
+          <div className="absolute bottom-4 left-0 right-0 z-20 text-center">
+            <p className="text-white/60 text-sm font-medium">
+              Created by Nahyeon Choi.
+            </p>
+          </div>
 
           {/* 영업 종료 오버레이 */}
           {isLimitExceeded && (
